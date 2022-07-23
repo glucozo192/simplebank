@@ -37,6 +37,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: install golang migrate 
+        run: |
+          curl -L https://github.com/golang-migrate/migrate/releases/download/$version/migrate.$platform-amd64.tar.gz | tar xvz
       - name: Run migration 2
         run: make migrateup
       # Runs a set of commands using the runners shell
