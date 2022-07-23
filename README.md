@@ -186,3 +186,11 @@ Also have a look at the [FAQ](FAQ.md).
 ---
 
 Looking for alternatives? [https://awesome-go.com/#database](https://awesome-go.com/#database).
+
+      - name: install golang migrate 
+        run: |
+          curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.2/migrate.linux-amd64.tar.gz| tar xvz
+          sudo mv migrate /usr/bin/
+          which 
+      - name: Run migration
+        run: make migrateup
