@@ -28,6 +28,8 @@ jobs:
           POSTGRES_USER: glucozo192
           POSTGRES_PASSWORD: 6677028a
           POSTGRES_DB: simple_bank
+        ports:
+          - 5432:4432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -40,7 +42,7 @@ jobs:
       - name: install golang migrate 
         run: |
           curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.2/migrate.linux-amd64.tar.gz| tar xvz
-          sudo mv migrate /usr/bin/migrate
+          sudo mv migrate /usr/bin/
           which 
       - name: Run migration
         run: make migrateup
