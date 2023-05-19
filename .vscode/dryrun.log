@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/tuannguyen/Project/techschool/simplebank'
-docker run --name postgretuan -p 4432:5432 -e POSTGRES_USER=glucozo192 -e POSTGRES_PASSWORD=6677028a -d postgres
-make: Leaving directory '/home/tuannguyen/Project/techschool/simplebank'
- 
